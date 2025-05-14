@@ -11,6 +11,7 @@ public class HelloEdpController {
 
     @GetMapping(value = "/api/hello")
     public String hello() {
-        return "Response received from pod: $HOSTNAME";
+        return "Response received from pod: "+
+                System.getenv("HOSTNAME");
     }
 }
